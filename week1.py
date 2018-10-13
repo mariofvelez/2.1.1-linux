@@ -1,14 +1,18 @@
-x = "#  #" # String; 
+s = "[]" #String; //what the pyramid is made of
+x = s + "  " + s # String; 
 y = 0 #int;
-z = 20 #int;
-a = "" #String
+i = 30 # final int; //number of steps for the pyramid
+z = i #int;
+a = "" #String;
+j = 0 #int;
 for y in range(z):
     while(z>y):
-        a = a + " ";
-        z = z - 1;
+        for j in range(len(s)):
+            a = a + " ";
+        z -= 1;
     print(a + x);
-    x = "#" + x + "#";
+    x = s + x + s;
     a = "";
-    z = 20;
+    z = i;
     y = y + 1;
     
